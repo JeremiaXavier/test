@@ -27,36 +27,36 @@ export default function Book() {
   return (
     <>
       <h2>Book Ticket</h2>
-
-      <input
-        placeholder="Name"
-        onChange={(e) => setName(e.target.value)}
-      />
-
-      <select onChange={(e) => setBus(e.target.value)}>
-        <option value="">Select Bus</option>
-        <option>KSRTC</option>
-        <option>Volvo</option>
-      </select>
-
-      <input
-        type="number"
-        value={seats}
-        onChange={(e) => setSeats(e.target.value)}
-      />
-
-      <label>
+      <label htmlFor="">
+        Name:
+        <input placeholder="Name" onChange={(e) => setName(e.target.value)} />
+      </label>
+      <label htmlFor="">
+        {" "}
+        Select Mode
+        <select onChange={(e) => setBus(e.target.value)}>
+          <option value="">Select Bus</option>
+          <option>KSRTC</option>
+          <option>Volvo</option>
+        </select>
+      </label>
+      <label htmlFor="">
+        Number
         <input
-          type="checkbox"
-          onChange={(e) => setAc(e.target.checked)}
+          type="number"
+          value={seats}
+          onChange={(e) => setSeats(e.target.value)}
         />
-        AC
       </label>
 
-      <input
-        type="date"
-        onChange={(e) => setDate(e.target.value)}
-      />
+      <label>AC
+        <input type="checkbox" onChange={(e) => setAc(e.target.checked)} />
+        
+      </label>
+<label htmlFor="">
+        Date      <input type="date" onChange={(e) => setDate(e.target.value)} />
+
+</label>
 
       <button onClick={submit}>Book</button>
     </>

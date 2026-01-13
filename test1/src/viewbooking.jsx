@@ -29,9 +29,9 @@ function deleteBooking(id) {
       <h2>View Bookings</h2>
 
       {list.map((b) => (
-        <p key={b.id}>
+        <p key={b.id} className="booking-items">
           {b.name} | {b.bus} | {b.seats} | {b.date} 
-          <input type="button" onClick={() => deleteBooking(b.id)} />
+          <input type="button" value={"x"} onClick={() => deleteBooking(b.id)} />
         </p>
       ))}
     </>
